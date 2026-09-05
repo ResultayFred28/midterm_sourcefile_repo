@@ -71,11 +71,17 @@ function analyzeClass(students){
     console.log(`Top Student: ${topStudent} with ${highestAverage.toFixed(1)}`);
 }
 
-let student1 = new Student("Lany", [85, 90, 92]);
-let student2 = new Student ( "Bongbung",[70, 75, 68]);
-let student3 = new Student("Dutherthe",[95, 98, 92]);
-let student4 = new Student("Pico", [55, 60, 58]);
+const studentData = [
+  { name: "Lany", scores: [85, 90, 92] },
+  { name: "Bongbung", scores: [70, 75, 68] },
+  { name: "Dutherthe", scores: [95, 98, 92] },
+  { name: "Pico", scores: [55, 60, 58] }
+];
 
+const students = [];
 
+for(let i = 0; i < studentData.length; i++){
+    students[i] = new Student(studentData[i].name, studentData[i].scores);
+}
 
-analyzeClass([student1, student2, student3, student4]);
+analyzeClass(students);
