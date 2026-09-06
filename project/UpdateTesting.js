@@ -42,7 +42,7 @@ class Student{
 
 function analyzeClass(students){
     let classSum = 0;
-    let highestAverage = -1;
+    let highestAverage = 0;
     let topStudent = "";
 
     console.log("\n\n--- Individual Reports ---");
@@ -68,6 +68,8 @@ function analyzeClass(students){
     console.log(`Class Average: ${classAverage.toFixed(1)}`);
     console.log(`Top Student: ${topStudent} with an average of ${highestAverage.toFixed(1)}`);
 }
+
+
 const studentData = [
   { name: "Lany", scores: [85, 90, 92] },
   { name: "Bongbung", scores: [70, 75, 68] },
