@@ -75,7 +75,8 @@ const studentData = [
   { name: "Lany", scores: [85, 90, 92] },
   { name: "Bongbung", scores: [70, 75, 68] },
   { name: "Dutherthe", scores: [95, 98, 92] },
-  { name: "Pico", scores: [55, 60, 58] }
+  { name: "Pico", scores: [55, 60, 58] },
+  { name: "Fred", scores: [73, 78, 90] }
 ];
 
 const students = [];
