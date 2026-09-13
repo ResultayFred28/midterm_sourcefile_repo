@@ -21,9 +21,6 @@ const activityScores = [
 ];
 
 
-const originalNames = ['Ana', 'Ben', 'Carla', 'Daniel', 'Ella'];
-
-
 // PART A: Display the Original Records
 
 console.log('Part A: Original Records');
@@ -95,14 +92,14 @@ console.log('\nPart E: Passing Score Analysis');
 const PASSING_SCORE = 75;
 
 const passingScores = studentScores.filter((score) => score >= PASSING_SCORE);
-const passFailLabels = studentScores.map((score) =>
+const Status = studentScores.map((score) =>
   score >= PASSING_SCORE ? 'Passed' : 'Failed'
 );
 const anyoneFailed = studentScores.some((score) => score < PASSING_SCORE);
 const everyonePassed = studentScores.every((score) => score >= PASSING_SCORE);
 
 console.log('Passing scores:', passingScores);
-console.log('Statuses:', passFailLabels);
+console.log('Statuses:', Status);
 console.log('At Least One Failed?', anyoneFailed);
 console.log('All Student Passed?', everyonePassed);
 
@@ -130,12 +127,12 @@ for (let i = 0; i < activityScores.length; i++) {
   // for spacing only,
   console.log();
   for (let j = 0; j < activityScores[i].length; j++) {
-    console.log(`${originalNames[i]}'s activity ${j} Scores: ${activityScores[i][j]}`);
+    console.log(`${studentNames[i]}'s activity ${j} Scores: ${activityScores[i][j]}`);
     rowTotal += activityScores[i][j];
   }
   const rowAverage = rowTotal / activityScores[i].length;
   activityAverages.push(rowAverage);
-  console.log(`${originalNames[i]}'s activity average: ${rowAverage.toFixed(2)}`);
+  console.log(`${studentNames[i]}'s activity average: ${rowAverage.toFixed(2)}`);
 }
 console.log();
 
@@ -144,5 +141,5 @@ console.log('Activity Averages:', activityAverages);
 
 // PART H: Create a Text Summary
 
-console.log('\n--- Part H: Text Summary ---');
+console.log('\nPart H: Text Summary');
 console.log('Students: ' + studentNames.join(' | '));
