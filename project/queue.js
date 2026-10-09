@@ -59,8 +59,8 @@ console.log(queues.dequeue()); */
 function hotPotato(names,passes){
     const queues = new Queue()
 
-    for(name in names){
-        queues.enqueue(name);
+    for(neyga in names){
+        queues.enqueue(neyga);
     }
 
     while(queues.size() > 1){

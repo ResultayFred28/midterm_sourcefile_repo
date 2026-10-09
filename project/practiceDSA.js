@@ -33,36 +33,35 @@ class Stack{
     }
 }
 
+ function decimaldiv2(decimalNumber){
+     const remainders = new Stack();
+     let number = decimalNumber;
+     let binary = '';
 
-// function decimaldiv2(decimalNumber){
+     while(number > 0){
+         remainders.push(Math.floor(number % 2));
+         number = Math.floor(number / 2);
+     }
+     while(!remainders.isEmpty()){
+         binary += remainders.pop();
+      }
+     return binary;
+ }
+// function baseConverter(decimalNumber, base){
 //     const remainders = new Stack();
+//     const digit = '0123456789ABCDEF';
 //     let number = decimalNumber;
-//     let binary = '';
+//     let result = '';
 
 //     while(number > 0){
-//         remainders.push(Math.floor(number % 2));
-//         number = Math.floor(number / 2);
+//         remainders.push(Math.floor(number % base));
+//         number = Math.floor(number / base);
 //     }
 //     while(!remainders.isEmpty()){
-//         binary += remainders.pop();
+//         result += digit[remainders.pop()];
 //     }
-//     return binary;
+//     return result;
 // }
-function baseConverter(decimalNumber, base){
-    const remainders = new Stack();
-    const digit = '0123456789ABCDEF';
-    let number = decimalNumber;
-    let result = '';
-
-    while(number > 0){
-        remainders.push(Math.floor(number % base));
-        number = Math.floor(number / base);
-    }
-    while(!remainders.isEmpty()){
-        result += digit[remainders.pop()];
-    }
-    return result;
-}
 
 
-console.log(baseConverter(16, 8));
+console.log(decimaldiv2(10));
