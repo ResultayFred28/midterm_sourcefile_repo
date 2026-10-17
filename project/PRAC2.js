@@ -6,7 +6,7 @@ class Student{
     }
 }
 
-let student1 = new Student('princess', 20, 'Da 2-1');
+let student1 = new Student('monsterr', 20, 'Da 2-1');
 let student2 = new Student('russ', 20, 'Da 2-1');
 let student3 = new Student('jared', 20, 'Da 2-1');
 let student4 = new Student('victrino', 20, 'Da 2-1');
